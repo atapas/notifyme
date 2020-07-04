@@ -1,0 +1,36 @@
+{
+  "name": "notifyme",
+  "version": "0.0.1",
+  "description": "React Component to notify you and keep track of it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.1",
+    "@babel/core": "7.8.7",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/preset-react": "7.10.1",
+    "babel-preset-es2015": "6.24.1",
+    "prop-types": "15.7.2",
+    "sass": "1.25.0"
+  },
+  "peerDependencies": {
+    "react": "16.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atapas/notifyme.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "notification"
+  ],
+  "author": "Tapas Adhikary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atapas/notifyme/issues"
+  },
+  "homepage": "https://github.com/atapas/notifyme#readme"
+}
