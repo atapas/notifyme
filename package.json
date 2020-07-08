@@ -1,6 +1,6 @@
 {
   "name": "react-notification-timeline",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Component to notify you and keep track of it as a timeline",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,10 @@
     "build_component": "babel --ignore dist,node_modules,NotiftMe.js . --out-file index.js"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "bootstrap": "^4.5.0",
     "moment": "^2.24.0",
     "react-bootstrap": "^1.0.1",
+    "react-feather": "^2.0.8",
     "reactjs-localstorage": "^1.0.1"
   },
   "devDependencies": {

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/js/all';
-import './NotifyMe.scss';
+import PropTypes from "prop-types";
 
 import Overlay from 'react-bootstrap/Overlay';
 import Popover from 'react-bootstrap/Popover';
@@ -11,19 +9,32 @@ import moment from 'moment';
 
 import {reactLocalStorage} from 'reactjs-localstorage';
 
+import { Bell, BellOff } from 'react-feather';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './NotifyMe.scss';
+
 const NotifyMe = props => {
-    const data = props.data;
+    // State variabls
     const [showCount, setShowCount] = useState(false);
     const [messageCount, setMessageCount] = useState(0);
     const [show, setShow] = useState(false);
     const [target, setTarget] = useState(null);
     const [raedIndex, setReadIndex] = useState(0);
+
+    // Useref for the overlay
     const ref = useRef(null);
-    const storageKey = props.storageKey;
+
+    // Props passed to the component
+    const data = props.data;
+    const storageKey = props.storageKey || 'notification_timeline_storage_id';
     const key = props.notific_key;
     const notificationMsg = props.notific_value;
     const sortedByKey = props.sortedByKey;
-    const heading = props.heading;
+    const heading = props.heading || 'Notifications';
+    const bellSize = props.size || 32;
+    const bellColor = props.color || '#FFFFFF';
+    const multiLineSplitter = props.multiLineSplitter || '\n';
 
     useEffect(() => {
         if (!sortedByKey) {
@@ -48,11 +59,13 @@ const NotifyMe = props => {
         setMessageCount(readIndex);
     },[]);
     
+    // Handle the click on the notification icon
     const handleClick = (event) => {
         setShow(!show);
         setTarget(event.target);
     }
 
+    // Calculate the day diff
     const getDayDiff = key => {
         var a = moment();
         var b = moment(key);
@@ -71,9 +84,10 @@ const NotifyMe = props => {
         }
     }
 
+    // Get the notification message
     const getContent = message => {
-        if (message.indexOf('\n')) {
-            let splitted = message.split('\n');
+        if (message.indexOf(multiLineSplitter)) {
+            let splitted = message.split(multiLineSplitter);
             let ret = '<ul>';
             for (let i = 0; i<splitted.length - 1 ; i ++) {
                 if (splitted[i] !== '') {
@@ -86,10 +100,12 @@ const NotifyMe = props => {
         return `<span>${message}</span>`;
     }
 
+    // Hide the notification on clicking outside
     const hide = () => {
         setShow(false);
     }
 
+    // Call the function when mark as read link is clicked
     const markAsRead = () => {
         setShowCount(false);
         reactLocalStorage.setObject(storageKey, {'id': data[0][key]});
@@ -102,7 +118,7 @@ const NotifyMe = props => {
                 <div className={showCount ? 'notification notify show-count' : 'notification notify'} 
                     data-count={messageCount} 
                     onClick={event => handleClick(event)}>
-                    <i className="fas fa-bell"></i>
+                    <Bell color={bellColor} size={bellSize} />
                 </div>
             </div>
 
@@ -120,8 +136,9 @@ const NotifyMe = props => {
                         <Popover.Title as="h3">{ heading }</Popover.Title>
                             <Popover.Content style={{padding: '3px 3px'}}>
                                 {showCount && <div>
-                                    <Button variant="link" onClick={markAsRead}>Mark all as read</Button>
-                                </div> }
+                                        <Button variant="link" onClick={markAsRead}>Mark all as read</Button>
+                                    </div> 
+                                }
                                 <ul className="notification-info-panel">
                                 {
                                     data.map((message, index) =>
@@ -141,5 +158,17 @@ const NotifyMe = props => {
         </>
     )
 };
+
+NotifyMe.prototype={
+    storageKey: PropTypes.string,
+    notific_key: PropTypes.string.isRequired,
+    data: PropTypes.array.isRequired,
+    notific_value: PropTypes.string.isRequired,
+    sortedByKey: PropTypes.bool,
+    color: PropTypes.string,
+    size:PropTypes.string,
+    heading: PropTypes.string,
+    multiLineSplitter: PropTypes.string
+}
 
 export default NotifyMe;
