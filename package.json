@@ -1,11 +1,11 @@
 {
-  "name": "notifyme",
-  "version": "0.0.2",
-  "description": "React Component to notify you and keep track of it",
+  "name": "react-notification-timeline",
+  "version": "0.0.1",
+  "description": "React Component to notify you and keep track of it as a timeline",
   "main": "index.js",
   "scripts": {
     "build": "babel --ignore dist,node_modules . --out-dir dist",
-    "build_component": "babel --ignore dist,node_modules . --out-file index.js"
+    "build_component": "babel --ignore dist,node_modules,NotiftMe.js . --out-file index.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",

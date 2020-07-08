@@ -20,12 +20,14 @@ const NotifyMe = props => {
     const [raedIndex, setReadIndex] = useState(0);
     const ref = useRef(null);
     const storageKey = props.storageKey;
-    const key = props.key;
+    const key = props.notific_key;
+    const notificationMsg = props.notific_value;
     const sortedByKey = props.sortedByKey;
+    const heading = props.heading;
 
     useEffect(() => {
         if (!sortedByKey) {
-            data.sort((a,b) => b.key - a.key);
+            data.sort((a,b) => b[key] - a[key]);
         }
         
         // We read if any last read item id is in the local storage
@@ -34,10 +36,10 @@ const NotifyMe = props => {
 
         // if the id found, we check what is the index of that message in the array and query it. If not found,
         // nothing has been read. Hence count should be same as all the mmesage count.
-        let readIndex = (readMsgId === '') ? data.length : data.findIndex(elem => elem.key === readMsgId);
+        let readIndex = (readMsgId === '') ? data.length : data.findIndex(elem => elem[key] === readMsgId);
         
         // if the id is not found, it all flushed out and start again
-        readIndex === -1 ? readIndex = 50 : readIndex;
+        readIndex === -1 ? readIndex = data.length : readIndex;
         
         setReadIndex(readIndex);
         
@@ -53,7 +55,7 @@ const NotifyMe = props => {
 
     const getDayDiff = key => {
         var a = moment();
-        var b = moment(key * 1000);
+        var b = moment(key);
         let diff = a.diff(b, 'days');
         if (diff === 0) {
             diff = a.diff(b, 'hour');
@@ -90,7 +92,7 @@ const NotifyMe = props => {
 
     const markAsRead = () => {
         setShowCount(false);
-        reactLocalStorage.setObject(storageKey, {'id': data[0].key});
+        reactLocalStorage.setObject(storageKey, {'id': data[0][key]});
         setReadIndex(0);
     }
 
@@ -115,7 +117,7 @@ const NotifyMe = props => {
                     onHide={hide}
                 >
                     <Popover id="popover-contained">
-                        <Popover.Title as="h3">Breaking Alerts!</Popover.Title>
+                        <Popover.Title as="h3">{ heading }</Popover.Title>
                             <Popover.Content style={{padding: '3px 3px'}}>
                                 {showCount && <div>
                                     <Button variant="link" onClick={markAsRead}>Mark all as read</Button>
@@ -126,8 +128,8 @@ const NotifyMe = props => {
                                         <li 
                                             className={index < raedIndex ? 'notification-message unread' : 'notification-message'}
                                             key={index}>
-                                            <div className="timestamp">{getDayDiff(message.key)}</div>
-                                            <div className="content" dangerouslySetInnerHTML={getContent(message.update)} />
+                                            <div className="timestamp">{getDayDiff(message[key])}</div>
+                                            <div className="content" dangerouslySetInnerHTML={getContent(message[notificationMsg])} />
                                         </li>
                                     )
                                 }
