@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 
 import moment from 'moment';
 
-import {reactLocalStorage} from 'reactjs-localstorage';
+import { reactLocalStorage } from 'reactjs-localstorage';
 
 import { Bell, BellOff } from 'react-feather';
 
@@ -38,9 +38,9 @@ const NotifyMe = props => {
 
     useEffect(() => {
         if (!sortedByKey) {
-            data.sort((a,b) => b[key] - a[key]);
+            data.sort((a, b) => b[key] - a[key]);
         }
-        
+
         // We read if any last read item id is in the local storage
         let readItemLs = reactLocalStorage.getObject(storageKey);
         let readMsgId = Object.keys(readItemLs).length > 0 ? readItemLs['id'] : '';
@@ -48,17 +48,17 @@ const NotifyMe = props => {
         // if the id found, we check what is the index of that message in the array and query it. If not found,
         // nothing has been read. Hence count should be same as all the mmesage count.
         let readIndex = (readMsgId === '') ? data.length : data.findIndex(elem => elem[key] === readMsgId);
-        
+
         // if the id is not found, it all flushed out and start again
         readIndex === -1 ? readIndex = data.length : readIndex;
-        
+
         setReadIndex(readIndex);
-        
+
         // If there are messages and readIndex is pointing to at least one message, we will show the count bubble.
         (data.length && readIndex) > 0 ? setShowCount(true) : setShowCount(false);
         setMessageCount(readIndex);
-    },[]);
-    
+    }, [data]);
+
     // Handle the click on the notification icon
     const handleClick = (event) => {
         setShow(!show);
@@ -72,7 +72,7 @@ const NotifyMe = props => {
         let diff = a.diff(b, 'days');
         if (diff === 0) {
             diff = a.diff(b, 'hour');
-            
+
             if (diff === 0) {
                 diff = a.diff(b, 'minute');
                 return `${diff} minute(s) before`
@@ -86,19 +86,26 @@ const NotifyMe = props => {
 
     // Get the notification message
     const getContent = message => {
-        if (message.indexOf(multiLineSplitter)) {
+        if (message.indexOf(multiLineSplitter) >= 0) {
             let splitted = message.split(multiLineSplitter);
             let ret = '<ul>';
-            for (let i = 0; i<splitted.length - 1 ; i ++) {
+
+            for (let i = 0; i < splitted.length - 1; i++) {
                 if (splitted[i] !== '') {
                     ret = ret + '<li>' + splitted[i] + '</li>';
                 }
             }
+
             ret = ret + '</ul>';
-            return { __html: ret };
+            return {
+                __html: ret
+            };
         }
-        return `<span>${message}</span>`;
-    }
+
+        return {
+            __html: `<ul><li>${message}</li></ul>`
+        };
+    };
 
     // Hide the notification on clicking outside
     const hide = () => {
@@ -108,15 +115,15 @@ const NotifyMe = props => {
     // Call the function when mark as read link is clicked
     const markAsRead = () => {
         setShowCount(false);
-        reactLocalStorage.setObject(storageKey, {'id': data[0][key]});
+        reactLocalStorage.setObject(storageKey, { 'id': data[0][key] });
         setReadIndex(0);
     }
 
     return (
         <>
             <div className="notification-container">
-                <div className={showCount ? 'notification notify show-count' : 'notification notify'} 
-                    data-count={messageCount} 
+                <div className={showCount ? 'notification notify show-count' : 'notification notify'}
+                    data-count={messageCount}
                     onClick={event => handleClick(event)}>
                     <Bell color={bellColor} size={bellSize} />
                 </div>
@@ -133,16 +140,16 @@ const NotifyMe = props => {
                     onHide={hide}
                 >
                     <Popover id="popover-contained">
-                        <Popover.Title as="h3">{ heading }</Popover.Title>
-                            <Popover.Content style={{padding: '3px 3px'}}>
-                                {showCount && <div>
-                                        <Button variant="link" onClick={markAsRead}>Mark all as read</Button>
-                                    </div> 
-                                }
-                                <ul className="notification-info-panel">
+                        <Popover.Title as="h3">{heading}</Popover.Title>
+                        <Popover.Content style={{ padding: '3px 3px' }}>
+                            {showCount && <div>
+                                <Button variant="link" onClick={markAsRead}>Mark all as read</Button>
+                            </div>
+                            }
+                            <ul className="notification-info-panel">
                                 {
                                     data.map((message, index) =>
-                                        <li 
+                                        <li
                                             className={index < raedIndex ? 'notification-message unread' : 'notification-message'}
                                             key={index}>
                                             <div className="timestamp">{getDayDiff(message[key])}</div>
@@ -150,8 +157,8 @@ const NotifyMe = props => {
                                         </li>
                                     )
                                 }
-                                </ul>
-                            </Popover.Content> 
+                            </ul>
+                        </Popover.Content>
                     </Popover>
                 </Overlay>
             </div>
@@ -159,14 +166,14 @@ const NotifyMe = props => {
     )
 };
 
-NotifyMe.prototype={
+NotifyMe.prototype = {
     storageKey: PropTypes.string,
     notific_key: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
     notific_value: PropTypes.string.isRequired,
     sortedByKey: PropTypes.bool,
     color: PropTypes.string,
-    size:PropTypes.string,
+    size: PropTypes.string,
     heading: PropTypes.string,
     multiLineSplitter: PropTypes.string
 }
