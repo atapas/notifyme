@@ -15,6 +15,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './NotifyMe.scss';
 
 const NotifyMe = props => {
+    moment.locale(navigator.languages[0].toLowerCase());
+
     // State variabls
     const [showCount, setShowCount] = useState(false);
     const [messageCount, setMessageCount] = useState(0);
@@ -35,6 +37,7 @@ const NotifyMe = props => {
     const bellSize = props.size || 32;
     const bellColor = props.color || '#FFFFFF';
     const multiLineSplitter = props.multiLineSplitter || '\n';
+    const showDate = props.showDate || false;
 
     useEffect(() => {
         if (!sortedByKey) {
@@ -66,22 +69,41 @@ const NotifyMe = props => {
     }
 
     // Calculate the day diff
-    const getDayDiff = key => {
-        var a = moment();
-        var b = moment(key);
-        let diff = a.diff(b, 'days');
+    const getDayDiff = timestamp => {
+        let a = moment();
+        let b = moment(timestamp);
+        let diff = a.diff(b, 'year');
         if (diff === 0) {
-            diff = a.diff(b, 'hour');
-
+            diff = a.diff(b, 'month');
             if (diff === 0) {
-                diff = a.diff(b, 'minute');
-                return `${diff} minute(s) before`
+                diff = a.diff(b, 'days');
+                if (diff === 0) {
+                    diff = a.diff(b, 'hour');
+                    if (diff === 0) {
+                        diff = a.diff(b, 'minute');
+                        if (diff === 0) {
+                            diff = a.diff(b, 'second');
+                            return `${diff} second(s) before`;
+                        } else {
+                            return `${diff} minute(s) before`;
+                        }
+                    } else {
+                        return `${diff} hour(s) before`;
+                    }
+                } else {
+                    return `${diff} days(s) before`;
+                }
             } else {
-                return `${diff} hour(s) before`;
+                return `${diff} month(s) before`;
             }
         } else {
-            return `${diff} day(s) before`;
+            return `${diff} year(s) before`;
         }
+    };
+
+    const getWhen = timestamp => {
+        let when = `${moment(timestamp).format('L')} ${moment(timestamp).format('LTS')}`;
+        return when;
     }
 
     // Get the notification message
@@ -101,7 +123,6 @@ const NotifyMe = props => {
                 __html: ret
             };
         }
-
         return {
             __html: `<ul><li>${message}</li></ul>`
         };
@@ -152,7 +173,10 @@ const NotifyMe = props => {
                                         <li
                                             className={index < raedIndex ? 'notification-message unread' : 'notification-message'}
                                             key={index}>
-                                            <div className="timestamp">{getDayDiff(message[key])}</div>
+                                            <div className="timestamp">
+                                                <span>{getDayDiff(message[key])}</span>
+                                                {showDate && <span>{' ('}{getWhen(message[key])}{')'}</span>}
+                                            </div>
                                             <div className="content" dangerouslySetInnerHTML={getContent(message[notificationMsg])} />
                                         </li>
                                     )
@@ -175,7 +199,8 @@ NotifyMe.prototype = {
     color: PropTypes.string,
     size: PropTypes.string,
     heading: PropTypes.string,
-    multiLineSplitter: PropTypes.string
+    multiLineSplitter: PropTypes.string,
+    showDate: PropTypes.bool
 }
 
 export default NotifyMe;
