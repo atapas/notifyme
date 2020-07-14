@@ -9,7 +9,7 @@ import moment from 'moment';
 
 import { reactLocalStorage } from 'reactjs-localstorage';
 
-import { Bell, BellOff } from 'react-feather';
+import { Bell, BellOff, BookOpen, AlertTriangle } from 'react-feather';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NotifyMe.scss';
@@ -112,7 +112,7 @@ const NotifyMe = props => {
             let splitted = message.split(multiLineSplitter);
             let ret = '<ul>';
 
-            for (let i = 0; i < splitted.length - 1; i++) {
+            for (let i = 0; i <= splitted.length - 1; i++) {
                 if (splitted[i] !== '') {
                     ret = ret + '<li>' + splitted[i] + '</li>';
                 }
@@ -164,11 +164,16 @@ const NotifyMe = props => {
                         <Popover.Title as="h3">{heading}</Popover.Title>
                         <Popover.Content style={{ padding: '3px 3px' }}>
                             {showCount && <div>
-                                <Button variant="link" onClick={markAsRead}>Mark all as read</Button>
+                                <Button variant="link" onClick={markAsRead}>
+                                    <BookOpen size={24} />
+                                    Mark all as read
+                                </Button>
                             </div>
                             }
                             <ul className="notification-info-panel">
                                 {
+                                    data.length > 0 ?
+                                    
                                     data.map((message, index) =>
                                         <li
                                             className={index < raedIndex ? 'notification-message unread' : 'notification-message'}
@@ -179,7 +184,11 @@ const NotifyMe = props => {
                                             </div>
                                             <div className="content" dangerouslySetInnerHTML={getContent(message[notificationMsg])} />
                                         </li>
-                                    )
+                                    ) :
+                                    <>
+                                        <AlertTriangle color='#000000' size={32} />
+                                        <h5 className="nodata">No Notifications found!</h5>
+                                    </>
                                 }
                             </ul>
                         </Popover.Content>
