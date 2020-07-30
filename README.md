@@ -61,6 +61,21 @@ Here is an example usage,
 
 ### Properties
 
+<table>
+  <tr>
+    <td> <b>Property</b> </td> 
+    <td> <b>Description</b> </td>
+    <td> <b>Required</b> </td>
+    <td> <b>Example</b> </td>
+  </tr>
+
+  <tr>
+    <td> color </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is *#FFFFFF*</td>
+  </tr>
+</table>
 
 # ✋ Contributions
 
