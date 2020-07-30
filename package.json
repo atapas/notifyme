@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel --ignore dist,node_modules . --out-dir dist",
-    "build_component": "babel --ignore dist,node_modules,NotiftMe.js . --out-file index.js"
+    "build_component": "babel --ignore dist,static,node_modules,NotiftMe.js . --out-file index.js"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
