@@ -120,42 +120,42 @@ Here is an example usage,
   </tr>
     
   <tr>
-    <td> data </td>
+    <td> notific_key </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
     <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
   </tr>
   
   <tr>
-    <td> data </td>
+    <td> notific_value </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
     <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
   </tr>
   
   <tr>
-    <td> data </td>
+    <td> showDate </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
     <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
   </tr>
   
   <tr>
-    <td> data </td>
+    <td> size </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
     <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
   </tr>
   
   <tr>
-    <td> data </td>
+    <td> sortedByKey </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
     <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
   </tr>
   
   <tr>
-    <td> data </td>
+    <td> storageKey </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
     <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
