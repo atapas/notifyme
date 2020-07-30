@@ -123,42 +123,42 @@ Here is an example usage,
     <td> notific_key </td>
     <td> Key in the data property that holds the timestamp value. </td>
     <td> Yes </td>
-  <td> <b>timestamp<b>, <b>attime</b> or any string based key name in the data property.</td>
+  <td> <b>timestamp</b>, <b>attime</b> or any string based key name in the data property.</td>
   </tr>
   
   <tr>
     <td> notific_value </td>
-    <td> Color of the notification bell. </td>
-    <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> key in the data property that holds the notification message value. </td>
+    <td> Yes </td>
+    <td> <b>update</b>, <b>message</b> or any string based key name in the data property.</td>
   </tr>
   
   <tr>
     <td> showDate </td>
-    <td> Color of the notification bell. </td>
+    <td> Notification messages shows the time by default. Pass true for this property, if you want to show time as well. Pass false otherwise. </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>false</b></td>
   </tr>
   
   <tr>
     <td> size </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> Size values as, 16, 32, 48 etc. Default value is <b>32</b></td>
   </tr>
   
   <tr>
     <td> sortedByKey </td>
-    <td> Color of the notification bell. </td>
+    <td> Pass true if the data passed to this component is already sorted by time-based key. Pass false otherwise, the component will take care of the time sorting. </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> true or false. <b>true</b></td>
   </tr>
   
   <tr>
     <td> storageKey </td>
-    <td> Color of the notification bell. </td>
+    <td> It stores the last read message key in localstorage of the browser.</td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> Any string of your choice. Default value is <b>notification_timeline_storage_id</b></td>
   </tr>
 </table>
 
