@@ -8,7 +8,9 @@
 - 👉 Do you want to manage multi-line notifications?
 - 👉 Do you limit the number of notifications you may want to see?
 
-Then, you should give `react-notification-timeline` a try. Here are some glimpses of the component,
+Then, you should give `react-notification-timeline` a try. 
+
+## Here are some screen-shots
 - Notification Componet with count
 
   <img src="./static/notification.png" alt="notification " />
@@ -17,11 +19,48 @@ Then, you should give `react-notification-timeline` a try. Here are some glimpse
 
  <img src="./static/screen.png" alt="notification with messages" width="400" height="400">
 
-
-
-
+## Live Demo
+TBA
 
 # ⚒️ How to use?
+
+## Install
+You can install `react-notification-timeline` using npm or yarn.
+
+```shell
+npm i react-notification-timeline
+```
+
+```yarn
+yarn add react-notification-timeline
+```
+
+## Import
+Once installed, it can be imported into a react component as,
+
+```js
+import NotifyMe from 'react-notification-timeline';
+```
+
+## Usage
+Here is an example usage,
+
+```js
+<NotifyMe
+  data={data}
+  storageKey='notific_key'
+  notific_key='timestamp'
+  notific_value='update'
+  heading='Notification Alerts'
+  sortedByKey={false}
+  showDate={true}
+  size={64}
+  color="yellow"
+/>
+```
+
+### Properties
+
 
 # ✋ Contributions
 
