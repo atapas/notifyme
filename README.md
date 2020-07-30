@@ -151,7 +151,7 @@ Here is an example usage,
     <td> sortedByKey </td>
     <td> Pass true if the data passed to this component is already sorted by time-based key. Pass false otherwise, the component will take care of the time sorting. </td>
     <td> No </td>
-    <td> true or false. <b>true</b></td>
+    <td> true or false. Default value is <b>true</b></td>
   </tr>
   
   <tr>
