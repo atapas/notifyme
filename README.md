@@ -106,10 +106,10 @@ Here is an example usage,
   </tr>
   
   <tr>
-    <td> data </td>
-    <td> Color of the notification bell. </td>
+    <td> heading </td>
+    <td> A header message for the Notification panel. </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  <td> Any string of your choice. Default value is, <b>Notifications</b> </td>
   </tr>
   
   <tr>
