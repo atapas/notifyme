@@ -113,14 +113,12 @@ Here is an example usage,
   </tr>
   
   <tr>
-    <td> data </td>
-    <td> Color of the notification bell. </td>
+    <td> multiLineSplitter </td>
+    <td> In case the notification messages has to be splitted into multiple (bullet) items, you can specify a line splitter character. </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> Any Character like, # or a sequence of characters, #$#. Default value is <b>\n</b></td>
   </tr>
-  
-  
-  
+    
   <tr>
     <td> data </td>
     <td> Color of the notification bell. </td>
