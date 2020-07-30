@@ -8,7 +8,18 @@
 - 👉 Do you want to manage multi-line notifications?
 - 👉 Do you limit the number of notifications you may want to see?
 
-Then, you should give `react-notification-timeline` a try.
+Then, you should give `react-notification-timeline` a try. Here are some glimpses of the component,
+- Notification Componet with count
+
+  <img src="./static/notification.png" alt="notification " />
+ 
+- Notification Componet with count and the messages
+
+ <img src="./static/screen.png" alt="notification with messages" width="400" height="400">
+
+
+
+
 
 # ⚒️ How to use?
 
