@@ -73,7 +73,70 @@ Here is an example usage,
     <td> color </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is *#FFFFFF*</td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+  </tr>
+  
+  <tr>
+    <td> data </td>
+    <td> Color of the notification bell. </td>
+    <td> No </td>
+    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
   </tr>
 </table>
 
