@@ -84,7 +84,7 @@ Here is an example usage,
         <li><b>timestamp:</b> is the timestamp of the time a message was geberated. This must be a of a type long and represent a timestamp.</li>
         <li><b>update:</b> is the message to show as notification.</li>
       </ul>
-      Note: The keys timestamp and update can be customized as explained below.
+      Note: The keys timestamp and update can be customized as explained in other properties below.
     </td>
     <td> Yes </td>
     <td>
@@ -121,9 +121,9 @@ Here is an example usage,
     
   <tr>
     <td> notific_key </td>
-    <td> Color of the notification bell. </td>
-    <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> Key in the data property that holds the timestamp value. </td>
+    <td> Yes </td>
+  <td> <b>timestamp<b>, <b>attime</b> or any string based key name in the data property.</td>
   </tr>
   
   <tr>
