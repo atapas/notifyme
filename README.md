@@ -165,5 +165,7 @@ Here is an example usage,
 # ✋ Contributions
 
 # 🏷️ License
+Copyright © 2020 by [Tapas Adhikary](https://tapasadhikary.com/)
+This project is licensed under MIT license.
 
 # ⭐ Show your support
