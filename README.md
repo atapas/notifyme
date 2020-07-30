@@ -73,7 +73,7 @@ Here is an example usage,
     <td> color </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> Color in Hexacode, rgb or string name. Default value is, <b>#FFFFFF</b></td>
   </tr>
   
   <tr>
@@ -116,7 +116,7 @@ Here is an example usage,
     <td> multiLineSplitter </td>
     <td> In case the notification messages has to be splitted into multiple (bullet) items, you can specify a line splitter character. </td>
     <td> No </td>
-    <td> Any Character like, # or a sequence of characters, #$#. Default value is <b>\n</b></td>
+    <td> Any Character like, # or a sequence of characters, #$#. Default value is, <b>\n</b></td>
   </tr>
     
   <tr>
@@ -137,28 +137,28 @@ Here is an example usage,
     <td> showDate </td>
     <td> Notification messages shows the time by default. Pass true for this property, if you want to show time as well. Pass false otherwise. </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>false</b></td>
+    <td> Color in Hexacode, rgb or string name. Default value is, <b>false</b></td>
   </tr>
   
   <tr>
     <td> size </td>
     <td> Color of the notification bell. </td>
     <td> No </td>
-    <td> Size values as, 16, 32, 48 etc. Default value is <b>32</b></td>
+    <td> Size values as, 16, 32, 48 etc. Default value is, <b>32</b></td>
   </tr>
   
   <tr>
     <td> sortedByKey </td>
     <td> Pass true if the data passed to this component is already sorted by time-based key. Pass false otherwise, the component will take care of the time sorting. </td>
     <td> No </td>
-    <td> true or false. Default value is <b>true</b></td>
+    <td> true or false. Default value is, <b>true</b></td>
   </tr>
   
   <tr>
     <td> storageKey </td>
     <td> It stores the last read message key in localstorage of the browser.</td>
     <td> No </td>
-    <td> Any string of your choice. Default value is <b>notification_timeline_storage_id</b></td>
+    <td> Any string of your choice. Default value is, <b>notification_timeline_storage_id</b></td>
   </tr>
 </table>
 
