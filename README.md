@@ -78,9 +78,31 @@ Here is an example usage,
   
   <tr>
     <td> data </td>
-    <td> Color of the notification bell. </td>
-    <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
+    <td> 
+      Messages to show as notifications. This is expected to be an array of objects. The objects must have two properties.
+      <ul>
+        <li><b>timestamp:</b> is the timestamp of the time a message was geberated. This must be a of a type long and represent a timestamp.</li>
+        <li><b>update:</b> is the message to show as notification.</li>
+      </ul>
+      Note: The keys timestamp and update can be customized as explained below.
+    </td>
+    <td> Yes </td>
+    <td>
+      
+   ```js
+      [
+        {
+          "update":"70 new employees are shifted",
+          "timestamp":1596119688264
+        },
+        {
+          "update":"Time to take a Break, TADA!!!",
+          "timestamp":1596119686811
+        }
+      ]
+   ```
+   
+   </td>
   </tr>
   
   <tr>
@@ -96,6 +118,8 @@ Here is an example usage,
     <td> No </td>
     <td> Color in Hexacode, rgb or string name. Default value is <b>#FFFFFF</b></td>
   </tr>
+  
+  
   
   <tr>
     <td> data </td>
