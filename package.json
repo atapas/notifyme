@@ -1,6 +1,6 @@
 {
   "name": "react-notification-timeline",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Component to notify you and keep track of it as a timeline",
   "main": "index.js",
   "scripts": {
