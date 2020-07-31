@@ -2,7 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-`react-notification-timeline` is a [react](https://reactjs.org/) based component helps in managing the notification in time-based manner. It is capable of keep tracking of the incoming notifications, managed read vs unread nitifications and many more customizations.
+`react-notification-timeline` is a [react](https://reactjs.org/) based component helps in managing the notification in time-based manner. It is capable of keep tracking of the incoming notifications, manage read vs unread nitifications and many more customizations.
 
 # 🔥 Why do you need this?
 - 👉 Is your project is based on react js and you are looking for a time-based notification system? 
