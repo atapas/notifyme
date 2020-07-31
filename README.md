@@ -181,7 +181,7 @@ This project is licensed under MIT license.
 If you liked the work, please show your support by giving a Star!
 
 # ✋ Contributions
-I would love to get feedbacks using the github issues. At the same time, please join hands in improving the component further by fixing bugs, adding features.
+I would love to get your feedback. Please use the github issues for submitting any feedback. At the same time, please join hands in improving the component further by fixing bugs, adding features.
 
 People contributed so far ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
