@@ -165,9 +165,6 @@ Here is an example usage,
   </tr>
 </table>
 
-# ✋ Contributions
-I would love to get feedbacks using the github issues. At the same time, please join hands in improving the component further by fixing bugs, adding features.
-
 # 🏷️ License
 Copyright © 2020 by [Tapas Adhikary](https://tapasadhikary.com/)
 
@@ -176,7 +173,8 @@ This project is licensed under MIT license.
 # ⭐ Show your support
 If you liked the work, please show your support by giving a Star!
 
-## Contributors ✨
+# ✋ Contributions
+I would love to get feedbacks using the github issues. At the same time, please join hands in improving the component further by fixing bugs, adding features.
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
