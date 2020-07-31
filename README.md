@@ -176,7 +176,7 @@ If you liked the work, please show your support by giving a Star!
 # ✋ Contributions
 I would love to get feedbacks using the github issues. At the same time, please join hands in improving the component further by fixing bugs, adding features.
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+People contributed so far ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
