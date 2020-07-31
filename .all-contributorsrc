@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "atapas",
+      "name": "Tapas Adhikary",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3633137?v=4",
+      "profile": "https://tapasadhikary.com",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "notifyme",
+  "projectOwner": "atapas",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
