@@ -23,7 +23,9 @@ Then, you should give `react-notification-timeline` a try.
  <img src="./static/screen.png" alt="notification with messages" width="400" height="400">
 
 ## Live Demo
-TBA
+A Live demo of the component is available here,
+
+[💻 DEMO](https://notify-timeline.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/3817c2b7-a17f-4bfb-ad90-008c03a5a4da/deploy-status)](https://app.netlify.com/sites/notify-timeline/deploys)
 
 # ⚒️ How to use?
 
@@ -181,7 +183,7 @@ This project is licensed under MIT license.
 If you liked the work, please show your support by giving a Star!
 
 # ✋ Contributions
-I would love to get feedbacks using the github issues. At the same time, please join hands in improving the component further by fixing bugs, adding features.
+I would love to get your feedback. Please use the github issues for submitting any feedback. At the same time, please join hands in improving the component further by fixing bugs, adding features.
 
 People contributed so far ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
