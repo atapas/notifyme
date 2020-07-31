@@ -63,6 +63,8 @@ Here is an example usage,
 ```
 
 ### Properties
+<details><summary>CLICK ME to know the details of the properties</summary>
+<p>
 
 <table>
   <tr>
@@ -164,6 +166,11 @@ Here is an example usage,
     <td> Any string of your choice. Default value is, <b>notification_timeline_storage_id</b></td>
   </tr>
 </table>
+
+</p>
+</details>
+
+
 
 # 🏷️ License
 Copyright © 2020 by [Tapas Adhikary](https://tapasadhikary.com/)
