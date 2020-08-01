@@ -2,7 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-`react-notification-timeline` is a [react](https://reactjs.org/) based component helps in managing the notification in time-based manner. It is capable of keep tracking of the incoming notifications, managed read vs unread nitifications and many more customizations.
+`react-notification-timeline` is a [react](https://reactjs.org/) based component helps in managing the notification in time-based manner. It is capable of keep tracking of the incoming notifications, manage read vs unread nitifications and many more customizations.
 
 # 🔥 Why do you need this?
 - 👉 Is your project is based on react js and you are looking for a time-based notification system? 
@@ -23,9 +23,9 @@ Then, you should give `react-notification-timeline` a try.
  <img src="./static/screen.png" alt="notification with messages" width="400" height="400">
 
 ## Live Demo
-A Live demo of the component is available here,
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3817c2b7-a17f-4bfb-ad90-008c03a5a4da/deploy-status)](https://app.netlify.com/sites/notify-timeline/deploys) 
 
-[💻 DEMO](https://notify-timeline.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/3817c2b7-a17f-4bfb-ad90-008c03a5a4da/deploy-status)](https://app.netlify.com/sites/notify-timeline/deploys)
+A Live demo of the component is available here, [💻 CLICK FOR DEMO](https://notify-timeline.netlify.app/) 
 
 # ⚒️ How to use?
 
@@ -88,7 +88,7 @@ Here is an example usage,
     <td> 
       Messages to show as notifications. This is expected to be an array of objects. The objects must have two properties.
       <ul>
-        <li><b>timestamp:</b> is the timestamp of the time a message was geberated. This must be a of a type long and represent a timestamp.</li>
+        <li><b>timestamp:</b> is the timestamp of the time a message was generated. This must be a of a type long and represent a timestamp.</li>
         <li><b>update:</b> is the message to show as notification.</li>
       </ul>
       Note: The keys timestamp and update can be customized as explained in other properties below.
