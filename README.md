@@ -27,6 +27,10 @@ Then, you should give `react-notification-timeline` a try.
 
 A Live demo of the component is available here, [💻 CLICK FOR DEMO](https://notify-timeline.netlify.app/) 
 
+# Many Thanks to all the `Stargazers` who has supported this project with stars(⭐)
+
+[![Stargazers repo roster for @atapas/notifyme](https://reporoster.com/stars/atapas/notifyme)](https://github.com/atapas/notifyme/stargazers)
+
 # ⚒️ How to use?
 
 ## Install
