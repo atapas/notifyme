@@ -180,9 +180,12 @@ Here is an example usage,
     </td>
     <td> No </td>
     <td> Now "Mark All As Read" can be controlled by passing you own function as prop. Default functionality is, 
-    1. We will clear the notification count.
-    2. Update the reactLocalStore with the latest notification key.
-    3. We will set the readIndex to 0 - which is used to highlight the unread notifications.</td>
+      <ul>
+        <li> We will clear the notification count.</li>
+        <li> Update the reactLocalStore with the latest notification key.</li>
+        <li> We will set the readIndex to 0 - which is used to highlight the unread notifications.</li>
+      </ul>
+   </td>
   </tr>
 </table>
 
