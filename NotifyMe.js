@@ -164,7 +164,7 @@ const NotifyMe = props => {
                         <Popover.Title as="h3">{heading}</Popover.Title>
                         <Popover.Content style={{ padding: '3px 3px' }}>
                             {showCount && <div>
-                                <Button variant="link" onClick={markAsRead}>
+                                <Button variant="link" onClick={props.markAsRead || markAsRead}>
                                     <BookOpen size={24} />
                                     Mark all as read
                                 </Button>
