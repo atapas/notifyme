@@ -65,7 +65,7 @@ Here is an example usage,
   showDate={true}
   size={64}
   color="yellow"
-  markAsRead={() => markAsReadFunc()}
+  markAsReadFn={() => yourOwnFunctionHandler()}
 />
 ```
 
@@ -176,10 +176,10 @@ Here is an example usage,
   <tr>
     <td> markAsRead </td>
     <td> User can control the functionality of "Mark All As Read" by passing the function as prop as below
-    markAsRead = {() => yourOwnFunction()}
+    markAsReadFn = {() => yourOwnFunctionHandler()}
     </td>
     <td> No </td>
-    <td> Now "Mark All As Read" can be controlled by passing you own function as prop. Default functionality is, 
+    <td> Now "Mark All As Read" can be controlled by passing your own function as prop. Default functionality is, 
       <ul>
         <li> We will clear the notification count.</li>
         <li> Update the reactLocalStore with the latest notification key.</li>
