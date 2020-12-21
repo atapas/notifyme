@@ -65,6 +65,7 @@ Here is an example usage,
   showDate={true}
   size={64}
   color="yellow"
+  markAsReadFn={() => yourOwnFunctionHandler()}
 />
 ```
 
@@ -170,6 +171,21 @@ Here is an example usage,
     <td> It stores the last read message key in localstorage of the browser.</td>
     <td> No </td>
     <td> Any string of your choice as a key. Default value is, <b>notification_timeline_storage_id</b></td>
+  </tr>
+  
+  <tr>
+    <td> markAsRead </td>
+    <td> User can control the functionality of "Mark All As Read" by passing the function as prop as below
+    markAsReadFn = {() => yourOwnFunctionHandler()}
+    </td>
+    <td> No </td>
+    <td> Now "Mark All As Read" can be controlled by passing your own function as prop. Default functionality is, 
+      <ul>
+        <li> We will clear the notification count.</li>
+        <li> Update the reactLocalStore with the latest notification key.</li>
+        <li> We will set the readIndex to 0 - which is used to highlight the unread notifications.</li>
+      </ul>
+   </td>
   </tr>
 </table>
 
