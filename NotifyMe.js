@@ -127,25 +127,6 @@ const NotifyMe = props => {
     };
   }; // Hide the notification on clicking outside
 
-    // const markList = (idMensaje) => {
-    //   MarcarComoLeidos(idMensaje);
-    // }
-
-    // const MarcarComoLeidos = async (id) => {
-    //   debugger
-    //   let _response = await actions.MarcarComoLeidos(id)
-    //   if (!_response.error) {
-    //     setShowCount(false);
-    //     reactLocalStorage.setObject(storageKey, {
-    //       'id': data[0][key]
-    //     });
-    //     setReadIndex(0);
-    //   }
-    // }
-
-    const handleClickMessage =(item)=>{
-        console.log("nodeModule console "  + JSON.stringify(item))
-    }
   const hide = () => {
     setShow(false);
   }; // Call the function when mark as read link is clicked
@@ -188,14 +169,14 @@ const NotifyMe = props => {
     }
   }, showCount && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Button, {
     variant: "link",
-    onClick:  props.markAsReadFn || markAsRead
+    onClick: event => props.markAsReadFn(data),
   }, /*#__PURE__*/React.createElement(BookOpen, {
     size: 24
   }), "Marcar como leídos.")), /*#__PURE__*/React.createElement("ul", {
     className: "notification-info-panel"
   }, data.length > 0 ? data.map((message, index) => /*#__PURE__*/React.createElement("li", {
     className: index < raedIndex ? 'notification-message unread' : 'notification-message',
-    onClick: handleClickMessage(message),
+    onClick: event => props.handleClickMessage(message),
     key: index
   }, /*#__PURE__*/React.createElement("div", {
     className: "timestamp"
@@ -222,7 +203,7 @@ NotifyMe.prototype = {
   multiLineSplitter: PropTypes.string,
   showDate: PropTypes.bool,
   markAsReadFn: PropTypes.func,
-  onClick: PropTypes.func
+  handleClickMessage: PropTypes.func
 
 };
 export default NotifyMe;
