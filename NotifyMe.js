@@ -171,7 +171,7 @@ const NotifyMe = props => {
     variant: "link",
     onClick: event => props.markAsReadFn(data),
   }, /*#__PURE__*/React.createElement(BookOpen, {
-    size: 24
+    size: 20
   }), "Marcar como leídos.")), /*#__PURE__*/React.createElement("ul", {
     className: "notification-info-panel"
   }, data.length > 0 ? data.map((message, index) => /*#__PURE__*/React.createElement("li", {
