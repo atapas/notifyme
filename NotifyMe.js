@@ -80,21 +80,21 @@ const NotifyMe = props => {
 
             if (diff === 0) {
               diff = a.diff(b, 'second');
-              return `${diff} second(s) before`;
+              return `Hace ${diff} second(s)`;
             } else {
-              return `${diff} minute(s) before`;
+              return `Hace ${diff} minute(s)`;
             }
           } else {
-            return `${diff} hour(s) before`;
+            return `Hace ${diff} hora(s)`;
           }
         } else {
-          return `${diff} days(s) before`;
+          return `Hace ${diff} día(s)`;
         }
       } else {
-        return `${diff} month(s) before`;
+        return `Hace ${diff} mese(s)`;
       }
     } else {
-      return `${diff} year(s) before`;
+      return `Hace ${diff} year(s)`;
     }
   };
 
