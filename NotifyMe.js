@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import moment from 'moment';
 import { reactLocalStorage } from 'reactjs-localstorage';
 import { Bell, BellOff, BookOpen, AlertTriangle } from 'react-feather';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './NotifyMe.scss';
 
 import {MarcarComoLeidos} from '../../src/redux/notificaciones/actions';
