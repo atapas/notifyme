@@ -82,10 +82,22 @@ Here is an example usage,
   </tr>
 
   <tr>
-    <td> color </td>
-    <td> Color of the notification bell. Pass a color to customize it.</td>
+    <td> theme </td>
+    <td> customizing the background and foreground of the Notification and its icon
+    </td>
     <td> No </td>
-    <td> Color in Hexacode, rgb or string name. Default value is, <b>#FFFFFF</b></td>
+    <td>
+      color and background color can be either in HexaCode,rgb or string name. Default is
+      
+
+   ```js
+      {
+        color:"yellow",
+        backgroundColor:"#282828"
+      }
+   ```
+   
+   </td>
   </tr>
   
   <tr>
