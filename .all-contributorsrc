@@ -33,6 +33,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "donymvarkey",
+      "name": "Dony M Varkey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31372381?v=4",
+      "profile": "https://github.com/donymvarkey",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
