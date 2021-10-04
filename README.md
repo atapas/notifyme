@@ -187,6 +187,16 @@ Here is an example usage,
       </ul>
    </td>
   </tr>
+
+  <tr>
+    <td> icon </td>
+    <td> User can add custom notification Icon by passing react-feather icon as prop as below icon={IconName} //You need to import the Icon from the react-feather library
+    </td>
+    <td> No </td>
+    <td> Any icon from the react-feather library default is Bell icon
+   </td>
+  </tr>
+  
 </table>
 
 </p>

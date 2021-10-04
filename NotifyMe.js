@@ -9,7 +9,7 @@ import moment from 'moment';
 
 import { reactLocalStorage } from 'reactjs-localstorage';
 
-import { Bell, BellOff, BookOpen, AlertTriangle } from 'react-feather';
+import { Bell, BookOpen, AlertTriangle } from 'react-feather';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NotifyMe.scss';
@@ -38,6 +38,7 @@ const NotifyMe = props => {
     const bellColor = props.color || '#FFFFFF';
     const multiLineSplitter = props.multiLineSplitter || '\n';
     const showDate = props.showDate || false;
+    const Icon = props.icon || Bell;
 
     useEffect(() => {
         if (!sortedByKey) {
@@ -53,7 +54,7 @@ const NotifyMe = props => {
         let readIndex = (readMsgId === '') ? data.length : data.findIndex(elem => elem[key] === readMsgId);
 
         // if the id is not found, it all flushed out and start again
-        readIndex === -1 ? readIndex = data.length : readIndex;
+        readIndex = readIndex === -1 &&  data.length;
 
         setReadIndex(readIndex);
 
@@ -146,7 +147,7 @@ const NotifyMe = props => {
                 <div className={showCount ? 'notification notify show-count' : 'notification notify'}
                     data-count={messageCount}
                     onClick={event => handleClick(event)}>
-                    <Bell color={bellColor} size={bellSize} />
+                    <Icon color={bellColor} size={bellSize} />
                 </div>
             </div>
 
@@ -210,7 +211,8 @@ NotifyMe.prototype = {
     heading: PropTypes.string,
     multiLineSplitter: PropTypes.string,
     showDate: PropTypes.bool,
-    markAsReadFn: PropTypes.func
+    markAsReadFn: PropTypes.func,
+    icon: PropTypes.func
 }
 
 export default NotifyMe;
