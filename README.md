@@ -14,11 +14,11 @@
 Then, you should give `react-notification-timeline` a try. 
 
 ## Here are some screen-shots
-- Notification Componet with the unread message count
+- Notification Component with the unread message count
 
   <img src="./static/notification.png" alt="notification " />
  
-- Notification Componet with the messages as a pop-over
+- Notification Component with the messages as a pop-over
 
  <img src="./static/screen.png" alt="notification with messages" width="400" height="400">
 
