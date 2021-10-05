@@ -35,7 +35,7 @@ const NotifyMe = props => {
     const sortedByKey = props.sortedByKey;
     const heading = props.heading || 'Notifications';
     const bellSize = props.size || 32;
-    const bellColor = props.color || '#FFFFFF';
+    const theme = props.theme || {color:'yellow',backgroundColor:'#282828'};
     const multiLineSplitter = props.multiLineSplitter || '\n';
     const showDate = props.showDate || false;
     const Icon = props.icon || Bell;
@@ -144,10 +144,11 @@ const NotifyMe = props => {
     return (
         <>
             <div className="notification-container">
-                <div className={showCount ? 'notification notify show-count' : 'notification notify'}
+                <div className={`notification ${showCount ? 'notify show-count' : 'notify'}`}
+                    style={{backgroundColor:theme.backgroundColor}}
                     data-count={messageCount}
                     onClick={event => handleClick(event)}>
-                    <Icon color={bellColor} size={bellSize} />
+                    <Icon color={theme.color} size={bellSize} />
                 </div>
             </div>
 
@@ -200,13 +201,16 @@ const NotifyMe = props => {
     )
 };
 
-NotifyMe.prototype = {
+NotifyMe.propTypes  = {
     storageKey: PropTypes.string,
     notific_key: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
     notific_value: PropTypes.string.isRequired,
     sortedByKey: PropTypes.bool,
-    color: PropTypes.string,
+    theme: PropTypes.shape({
+        color: PropTypes.string,
+        backgroundColor: PropTypes.string
+    }),
     size: PropTypes.string,
     heading: PropTypes.string,
     multiLineSplitter: PropTypes.string,
